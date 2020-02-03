@@ -61,3 +61,8 @@ arrest_tab %>%
 group_by(district) %>%
 summarize(min_age=min(age), max_age=max(age), mean_age=mean(age))
 ```
+**pull** - All the above operations return a tibble/data.frame as the final output. However if you want to pull a specific attribute as a vector use pull
+```{r}
+age_vec <- arrest_tab %>% pull(age)
+class(age_vec)
+```
